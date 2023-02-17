@@ -68,6 +68,9 @@ $(document).ready(function() {
             evLabel = 'form_send',
             evAction = 'write_to_us';
 
+        $('.nx_call_form .btn').prop( 'disabled', true);
+        $(nxDestName).addClass('blocked');
+
         NxGoals(evAction, evLabel);
         console.log('Send form ' + nxDestName);
 
@@ -83,6 +86,9 @@ $(document).ready(function() {
             },
         }).done(function (data) {
             $('#NXPreLoader').remove();
+            $('.nx_call_form .btn').prop( 'disabled', false);
+            $(nxDestName).removeClass('blocked');
+
             var nxAjax = data.AJAX;
             if(nxAjax) {
                 if(nxAjax.send) {
