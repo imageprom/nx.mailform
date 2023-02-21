@@ -1,0 +1,55 @@
+.ajax_call_form {width: 400px; padding:1em 2em; display: none;
+position:fixed; z-index:10000; top:10%; left:50%; margin-left: -200px; 
+border:5px solid #ed9700; border-right:none; border-left:none;  background: #fff; font-size:10pt;
+overflow: auto;  
+-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+
+.ajax_call_form .call_form {margin:0; padding:0;  border:0;  outline:0;}
+
+.call-table {width:100%; margin:0; border:0px solid #ccc; background:none; border-collapse:collapse;}
+.call-table td, 
+.call-table th {padding:0.5em 0; text-align:left; font-family: kelson, Arial, sans-serif; font-size:10.5pt; font-weight:normal;}
+
+.call-table input.cb { background:none;}
+.call-table .inpt {width:100%; padding:0.5em; border-color: #aaa #aaa #bbb #bbb;
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.call-table .rpsn {text-align: right;}
+.call-table textarea.inpt {height:100px; background:#fff; overflow:hidden;}
+
+.call-table .inpt[required="required"] {border-color: #648EBE;}
+
+.call-table input.btn {width:100%;  padding:0.7em 1em; font-size:13pt;}
+
+.call_error {margin:0; font-size:10pt; font-family: Helvetica, Arial, sans-serif;  color:#000;  }
+.call_error b   {font-weight: normal;}
+.call_error b b {display: block;} 
+.call_error ul  {padding-left:1.2em;}
+
+.ajax_call_form h3, 
+.main-page .ajax_call_form h3
+{margin:0; font-size:18pt; padding-bottom: 15px; padding-right: 50px;}
+.ajax_call_form h2 {margin: 1em 0; background: none; text-align: left;}
+.ajax_call_form h2:after {display: none;}
+
+.call_send_ok {margin-bottom: 0;}
+.call-note blockquote {margin-left: 0}
+.call-note h5 {margin-top: 0.5em; }
+
+.ajax_call_form .hide-form {position: absolute; top:0; right: 1em; z-index: 20; padding:0.8em 1em; text-transform: uppercase; font-size: 11pt;
+text-decoration: none; cursor:pointer;}
+.ajax_call_form .hide-form:after {content: '\00D7'; font-size:20pt; line-height: 100%; padding-left: 5px; z-index: 22; color:#E3000F;}
+
+
+
+
+@media only screen and (max-width: 500px) {
+.ajax_call_form {top:0; left:0; right: 0; margin: 0; width: auto; overflow-y: auto;} 
+.ajax_call_form h3 {font-size:16pt;}
+.ajax_call_form h2, 
+.main-page .ajax_call_form h2 {padding-right: 100px; font-size:16pt;}
+.ajax_call_form .hide-form:after {font-size:16pt;}
+.ajax_call_form .hide-form {top:0.3em; font-size: 8pt;}
+.call-table input.nx-call-submit {font-size: 16pt; padding:0.3em 0; }
+.call-table textarea.inpt {height: 60px;}
+
+}
