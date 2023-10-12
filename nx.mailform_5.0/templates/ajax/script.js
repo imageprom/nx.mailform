@@ -111,7 +111,7 @@ $(document).ready(function() {
             dataFormSrc = object.attr('data-form'),
             dataForm = {'nx_json' : false};
 
-        if(dataFormSrc.length) {
+        if(dataFormSrc !== undefined && dataFormSrc.length) {
             dataForm = JSON.parse(dataFormSrc);
             dataForm.nx_json = true;
         }

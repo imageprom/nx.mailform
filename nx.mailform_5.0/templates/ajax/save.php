@@ -61,7 +61,7 @@ else {
 			if($arResult['ITEMS'][$i]['type'] == 'file') {
 				$file_upp = CFile::MakeFileArray($arResult['R']->GV($i));
 				$fid = CFile::SaveFile($file_upp, 'hlblock');
-				if (intval($fid)>0) $PROP[$arParams['F'.$i.'_CONNECT']] = $fid;
+				if (intval($fid)>0) $PROP[$arParams['F'.$i.'_CONNECT']] = $file_upp;
 
 //                $file_upp = CFile::MakeFileArray($arResult['R']->GV($i));
 //                $PROP[$arParams['F'.$i.'_CONNECT']] = array('VALUE' => $file_upp);
