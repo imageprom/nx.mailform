@@ -238,7 +238,7 @@ class CNXSimpleIm {
         if($type) {
             $pattern = '';
             if(self::$html5Patterns[$type]) {
-                $pattern .= ' pattern="'.self::$html5Patterns[$type].'"';
+                $pattern .= " pattern='". self::$html5Patterns[$type]."'";
                 if(self::$html5Titles[$type])
                     $pattern .= ' title="'.self::$html5Titles[$type].'" ';
                 return $pattern;
