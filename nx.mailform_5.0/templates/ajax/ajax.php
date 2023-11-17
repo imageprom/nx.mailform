@@ -1,4 +1,20 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
+/** @var CBitrixComponent $this */
+/** @var array $arParams */
+/** @var array $arResult */
+/** @var string $componentPath */
+/** @var string $componentName */
+/** @var string $componentTemplate */
+/** @var string $templateFolder */
+/** @var string $mTemplate */
+/** @var array $arCurrentValues */
+/** @var array $arCurrentValues */
+/** @const string LANG_CHARSET */
+/** @global CDatabase $DB */
+/** @global CUser $USER */
+/** @global CMain $APPLICATION */
+
 $APPLICATION->RestartBuffer();
 $path = $_SERVER['DOCUMENT_ROOT'].$templateFolder;
 $arResult['R'] = new NXMailForm\CNXInput($arResult['ITEMS'], $arParams['FORM_ID']);
@@ -45,4 +61,3 @@ $res['form_class'] = 'ajax_call_form_static';
 
 $arResult['AJAX'] = $res;
 echo json_encode($arResult);
-?>

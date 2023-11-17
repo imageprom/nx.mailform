@@ -1,4 +1,3 @@
 <?
-$MESS ['MENU_DOT_DEFAULT_NAME'] = "Default vertical menu";
-$MESS ['MENU_DOT_DEFAULT_DESC'] = "Default vertical menu";
-?>
+$MESS ['FORM_DEFAULT_NAME'] = "Default ajax form";
+$MESS ['FORM_DEFAULT_DESC'] = "Default ajax form";

@@ -1,5 +1,23 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-use Bitrix\Highloadblock as HL; 
+
+/** @var CBitrixComponent $this */
+/** @var array $arParams */
+/** @var array $arResult */
+/** @var string $componentPath */
+/** @var string $componentName */
+/** @var string $componentTemplate */
+/** @var string $templateFolder */
+/** @var string $mTemplate */
+/** @var array $arCurrentValues */
+/** @var string $XML_ID */
+/** @var array $NX_BASKET_RESULT_DATA */
+/** @var string $SHOP_ID */
+/** @const string LANG_CHARSET */
+/** @global CDatabase $DB */
+/** @global CUser $USER */
+/** @global CMain $APPLICATION */
+
+use Bitrix\Highloadblock as HL;
 
 if($arParams['LOG_FORMAT'] != 'hib') {
 
@@ -28,7 +46,6 @@ if($arParams['LOG_FORMAT'] != 'hib') {
 	if($arParams['USER_CONNECT'] && $arParams['USER_CONNECT'] != 'none')
 		 $PROP[$arParams['USER_CONNECT']] = $USER->GetID();
 
-
 	$arLoadItemArray = Array(
 		'MODIFIED_BY'    => $USER->GetID(), 
 		'IBLOCK_SECTION_ID' => false,          
@@ -46,7 +63,6 @@ if($arParams['LOG_FORMAT'] != 'hib') {
 
 	$el = new CIBlockElement;
 	$ITEM_ID = $el->Add($arLoadItemArray);
-
 }
 else {  
 	$rsHIBlock = HL\HighloadBlockTable::getList(array('select'=>array('*'), 'filter'=>array('ID' => $arParams['LOG_HIB_ID'])));
@@ -60,11 +76,7 @@ else {
 		if($arResult['R']->GV($i) && $arParams['F'.$i.'_CONNECT'] && $arParams['F'.$i.'_CONNECT'] != 'none') {
 			if($arResult['ITEMS'][$i]['type'] == 'file') {
 				$file_upp = CFile::MakeFileArray($arResult['R']->GV($i));
-				$fid = CFile::SaveFile($file_upp, 'hlblock');
-				if (intval($fid)>0) $PROP[$arParams['F'.$i.'_CONNECT']] = $file_upp;
-
-//                $file_upp = CFile::MakeFileArray($arResult['R']->GV($i));
-//                $PROP[$arParams['F'.$i.'_CONNECT']] = array('VALUE' => $file_upp);
+				if ($file_upp['size'] > 0) $PROP[$arParams['F'.$i.'_CONNECT']] = $file_upp;
 			}
 			else $PROP[$arParams['F'.$i.'_CONNECT']] = $arResult['R']->GV($i);
 		}

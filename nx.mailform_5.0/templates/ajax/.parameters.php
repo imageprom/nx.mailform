@@ -1,4 +1,5 @@
-﻿<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+﻿<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
 $arTemplateParameters["BUTTON"] = array(
     "NAME" => "Надпись на кнопке",
     "TYPE" => "TEXT",
@@ -47,4 +48,3 @@ $arTemplateParameters["ORDER_ADDITIONAL_INFO"] = array(
     "DEFAULT" => "",
     "PARENT" => "BASE",
 );
-?>

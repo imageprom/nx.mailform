@@ -1,5 +1,21 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
+/** @var CBitrixComponent $this */
+/** @var array $arParams */
+/** @var array $arResult */
+/** @var string $componentPath */
+/** @var string $componentName */
+/** @var string $componentTemplate */
+/** @var string $templateFolder */
+/** @var string $mTemplate */
+/** @var array $arCurrentValues */
+/** @var array $arCurrentValues */
+/** @const string LANG_CHARSET */
+/** @const string SITE */
+/** @global CDatabase $DB */
+/** @global CUser $USER */
+/** @global CMain $APPLICATION */
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 /***** LETTER TEMPLATE *****/
